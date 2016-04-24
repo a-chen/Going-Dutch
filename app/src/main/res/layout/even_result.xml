@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.jaja.billsplitbeta.evenInput">
+
+    <TextView
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/total"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/appLabel"
+        android:layout_toEndOf="@+id/appLabel" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/back_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Amount per Person"
+        android:id="@+id/appLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="$"
+        android:id="@+id/dollarLabel"
+        android:layout_alignTop="@+id/total"
+        android:layout_toStartOf="@+id/total" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Effective Tip Percentage"
+        android:id="@+id/ETPLabel"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/decrementTip"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15.00"
+        android:id="@+id/tipPercentageView"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/ETPLabel"
+        android:layout_toStartOf="@+id/dollarLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Rounding"
+        android:id="@+id/roundingLabel"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/tipPercentageView"
+        android:layout_alignParentStart="true" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Penny"
+        android:textOff="Penny"
+        android:textOn="Penny"
+        android:id="@+id/pennyToggle"
+        android:layout_marginTop="31dp"
+        android:checked="false"
+        android:layout_below="@+id/roundingLabel"
+        android:layout_toStartOf="@+id/quarterToggle" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quarter"
+        android:textOff="Quarter"
+        android:textOn="Quarter"
+        android:id="@+id/quarterToggle"
+        android:layout_alignTop="@+id/pennyToggle"
+        android:layout_centerHorizontal="true"
+        android:checked="false" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dollar"
+        android:textOff="Dollar"
+        android:textOn="Dollar"
+        android:id="@+id/dollarToggle"
+        android:layout_alignTop="@+id/quarterToggle"
+        android:layout_toEndOf="@+id/quarterToggle"
+        android:checked="false" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decrementTip"
+        android:layout_below="@+id/total"
+        android:layout_toStartOf="@+id/incrementTip" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/incrementTip"
+        android:layout_below="@+id/total"
+        android:layout_alignEnd="@+id/total" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="%"
+        android:id="@+id/pctLabel"
+        android:layout_above="@+id/roundingLabel"
+        android:layout_alignStart="@+id/dollarLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Adjust"
+        android:id="@+id/adjustLabel"
+        android:layout_alignBottom="@+id/decrementTip"
+        android:layout_alignEnd="@+id/pctLabel"
+        android:layout_marginBottom="13dp" />
+</RelativeLayout>
