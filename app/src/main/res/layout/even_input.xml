@@ -26,7 +26,8 @@
         android:id="@+id/decrementButton"
         android:layout_below="@+id/modeSwitch"
         android:layout_toStartOf="@+id/peopleNumber"
-        android:layout_marginTop="49dp" />
+        android:layout_marginTop="49dp"
+        />
 
     <EditText
         android:layout_width="30dip"
@@ -36,7 +37,8 @@
         android:id="@+id/peopleNumber"
         android:text="3"
         android:layout_alignBottom="@+id/decrementButton"
-        android:layout_toStartOf="@+id/incrementButton" />
+        android:layout_toStartOf="@+id/incrementButton"
+        android:gravity="center"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -72,7 +74,8 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/totalValue"
-        android:layout_alignBottom="@+id/totalLabel"
+        android:gravity="center"
+        android:layout_centerVertical="true"
         android:layout_alignEnd="@+id/incrementButton" />
 
     <TextView

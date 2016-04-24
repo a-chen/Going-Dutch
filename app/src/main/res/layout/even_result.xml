@@ -15,7 +15,8 @@
         android:id="@+id/total"
         android:layout_marginTop="23dp"
         android:layout_below="@+id/appLabel"
-        android:layout_toEndOf="@+id/appLabel" />
+        android:layout_toEndOf="@+id/appLabel" 
+        android:gravity="center_vertical"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -31,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Amount per Person"
+        android:text="Amount Per Person"
         android:id="@+id/appLabel"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
@@ -59,10 +60,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="15.00"
+        android:textSize="20sp"
         android:id="@+id/tipPercentageView"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@+id/ETPLabel"
-        android:layout_toStartOf="@+id/dollarLabel" />
+        android:layout_toStartOf="@+id/pctLabel" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -141,7 +143,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Adjust"
         android:id="@+id/adjustLabel"
+        android:layout_below="@+id/dollarLabel"
+        android:layout_alignEnd="@+id/dollarLabel"
         android:layout_alignBottom="@+id/decrementTip"
-        android:layout_alignEnd="@+id/pctLabel"
-        android:layout_marginBottom="13dp" />
+        android:layout_alignStart="@+id/quarterToggle"
+        android:gravity="center_vertical"/>
 </RelativeLayout>
